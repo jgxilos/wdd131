@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Jernigam Gonzalez</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course landing page by Jernigam Gonzalez. Includes personal information, web development resources, and dynamic elements.">
+    <meta name="author" content="Jernigam Gonzalez">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/jernigam/">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/82?lang=eng&id=p10#p10">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Jernigam Gonzalez</h1>
+        
+        <div class="content-grid">
+            <!-- Tarjeta 1: Sobre Mí (Izquierda) -->
+            <section class="card about">
+                <h2>About Me</h2>
+                
+                <div class="profile">
+                    <p class="bio">
+                        I am a passionate web developer with experience in creating innovative solutions. Born in Venezuela and currently residing in Miami, I love exploring new technologies and sharing knowledge. My journey in web development has allowed me to combine creativity with technical skills, delivering projects that meet user needs while pushing the boundaries of what's possible online.
+                    </p>
+                    <img src="images/profile.jpg" alt="Profile picture">
+                </div>
+                
+                <h3>Venezuela 🇻🇪</h3>
+                <p>
+                    Venezuela is a country rich in biodiversity and culture. Its Caribbean coast is famous for its paradisiac beaches, and its cuisine is a unique blend of indigenous, African, and European influences. From the Andes mountains to the Amazon rainforest, Venezuela offers a diverse landscape that inspires both locals and visitors.
+                </p>
+                <img src="images/flag.jpg" alt="Venezuelan flag" class="flag">
+            </section>
+
+            <!-- Tarjeta 2: Web Development Resources (Derecha) -->
+            <section class="card resources">
+                <h2>Web Development Resources</h2>
+                <ul>
+                    <li><a href="https://dev.to/">Dev.to Community</a></li>
+                    <li><a href="https://smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span> Jernigam Gonzalez | Venezuela</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
