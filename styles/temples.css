@@ -1,0 +1,146 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-top: 1rem;
+}
+
+/* Encabezado */
+header {
+    background-color: #6A1B9A;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botón hamburguesa */
+#hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#hamburger-btn .close-icon {
+    display: none;
+}
+
+/* Estilos de navegación */
+nav ul {
+    list-style: none;
+    display: none;
+    padding: 1rem;
+    background: #6A1B9A;
+}
+
+nav ul.show {
+    display: block;
+}
+
+nav li {
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem;
+    border-radius: 4px;
+    background-color: #34495e;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+nav a.active {
+    background-color: #FFC0CB;
+    color: #2c3e50;
+}
+
+/* Contenido principal */
+main {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.content-container {
+    text-align: center;
+}
+
+main h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+main h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Diseño de figuras */
+figure {
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    margin: 0.75rem;
+    color: #2c3e50;
+}
+
+/* Footer */
+footer {
+    background-color: #6A1B9A;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}

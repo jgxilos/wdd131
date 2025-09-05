@@ -1,0 +1,55 @@
+/* Estilos para pantallas grandes */
+header {
+    padding: 1.5rem;
+}
+
+/* Ocultar botón hamburguesa en pantallas grandes */
+#hamburger-btn {
+    display: none;
+}
+
+/* Mostrar navegación por defecto en pantallas grandes */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+
+nav a {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+/* Contenido principal */
+main {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.content-container {
+    text-align: center;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Diseño de figuras */
+figure {
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
