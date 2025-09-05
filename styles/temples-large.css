@@ -1,55 +1,40 @@
-/* Styles for large screens */
-header {
-    padding: 1.5rem;
-}
+@media screen and (min-width: 768px) {
+    /* --- Header & Navigation for large screens --- */
+    #hamburger-btn {
+        display: none; /* Hide hamburger on large screens */
+    }
 
-/* Hide hamburger button on large screens */
-#hamburger-btn {
-    display: none;
-}
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        position: static; /* Reset position */
+        background: none;
+        width: auto;
+    }
 
-/* Show default navigation on large screens */
-nav ul {
-    display: flex;
-    justify-content: center;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
+    nav li {
+        width: auto;
+        margin: 0 0.5rem;
+    }
 
-nav li {
-    margin: 0 0.5rem;
-}
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
 
-nav a {
-    background-color: transparent;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-}
+    /* --- Main Content for large screens --- */
+    main {
+        /* GRID FOR LARGE SCREENS: Auto-fit columns */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    /* --- Figure Hover Effect for large screens --- */
+    figure {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Main content */
-main {
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-.content-container {
-    text-align: center;
-}
-
-.image-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-/* Figure design */
-figure {
-    width: 350px;
-    transition: transform 0.3s ease;
-}
-
-figure:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    figure:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 }

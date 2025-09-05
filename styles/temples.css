@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* --- Base and Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,131 +10,131 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
-    padding-top: 1rem;
 }
 
-/* Header */
+/* --- Header --- */
 header {
-    background-color: #6A1B9A;
+    background-color: #4a148c; /* Darker Purple */
     color: white;
     padding: 1rem;
-    position: relative;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     font-family: 'Merriweather', serif;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
 }
 
-/* Hamburger button */
+/* --- Navigation --- */
 #hamburger-btn {
     background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    display: block; /* Show by default on mobile */
 }
 
 #hamburger-btn .close-icon {
-    display: none;
+    display: none; /* Hide X by default */
 }
 
-/* Navigation styles */
-nav ul {
-    list-style: none;
-    display: none;
-    padding: 1rem;
-    background: #6A1B9A;
-}
-
-nav ul.show {
+/* When menu is open, show X and hide hamburger */
+#primary-nav.open ~ #hamburger-btn .close-icon {
     display: block;
 }
 
+#primary-nav.open ~ #hamburger-btn .hamburger-icon {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #5c2c9d;
+}
+
+nav ul.open {
+    display: flex; /* Show when open class is applied */
+}
+
 nav li {
-    margin-bottom: 0.5rem;
+    width: 100%;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 0.75rem;
-    border-radius: 4px;
-    background-color: #34495e;
+    padding: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+/* --- HOVER EFFECT --- */
+nav a:hover {
+    background-color: #7b4eb1;
+    color: #fff;
 }
 
 nav a.active {
-    background-color: #FFC0CB;
-    color: #2c3e50;
+    background-color: #fce4ec; /* Light Pink */
+    color: #4a148c;
 }
 
-/* Main content */
+/* --- Main Content --- */
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 1.5rem auto;
     padding: 0 1rem;
-}
-
-.content-container {
-    text-align: center;
-}
-
-main h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
+    /* GRID FOR MOBILE: 1 COLUMN */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 main h2 {
     font-family: 'Merriweather', serif;
     font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+    text-align: center;
     color: #2c3e50;
+    grid-column: 1 / -1; /* Span full width */
 }
 
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Figure design */
+/* --- Figure Design --- */
 figure {
-    width: 300px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
     background: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 figure img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 figure figcaption {
     font-family: 'Merriweather', serif;
-    font-size: 1.2rem;
-    margin: 0.75rem;
+    font-size: 1.1rem;
+    padding: 1rem;
     color: #2c3e50;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
-    background-color: #6A1B9A;
+    background-color: #4a148c;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -142,5 +142,5 @@ footer {
 }
 
 footer p {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
 }

@@ -8,37 +8,19 @@ document.getElementById('last-modified').textContent = lastModified;
 
 // Hamburger menu functionality
 const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMenu = document.getElementById('primary-nav');
-const closeIcon = document.querySelector('.close-icon');
-const hamburgerIcon = document.querySelector('.hamburger-icon');
+const navMenu = document.getElementById('primary-nav').querySelector('ul');
 
-hamburgerBtn.addEventListener('click', function() {
-    const navList = navMenu.querySelector('ul');
-    navList.classList.toggle('show');
-    
-    // Toggle between hamburger icon and close icon
-    if (navList.classList.contains('show')) {
-        hamburgerIcon.style.display = 'none';
-        closeIcon.style.display = 'inline';
-    } else {
-        hamburgerIcon.style.display = 'inline';
-        closeIcon.style.display = 'none';
-    }
+hamburgerBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    // The CSS now handles showing/hiding icons based on the 'open' class
 });
 
-// Close menu when clicking on a navigation link
-const navLinks = document.querySelectorAll('nav a');
+// Close menu when a link is clicked (optional, but good UX)
+const navLinks = document.querySelectorAll('#primary-nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        const navList = navMenu.querySelector('ul');
-        navList.classList.remove('show');
-        hamburgerIcon.style.display = 'inline';
-        closeIcon.style.display = 'none';
-        
-        // Update active link
-        document.querySelectorAll('nav a').forEach(a => {
-            a.classList.remove('active');
-        });
-        link.classList.add('active');
+        if (navMenu.classList.contains('open')) {
+            navMenu.classList.remove('open');
+        }
     });
 });
