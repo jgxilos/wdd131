@@ -1,12 +1,12 @@
-// Actualizar año de copyright
+// Update copyright year
 const currentYear = new Date().getFullYear();
 document.getElementById('copyright-year').textContent = currentYear;
 
-// Actualizar fecha de última modificación
+// Update last modified date
 const lastModified = document.lastModified;
 document.getElementById('last-modified').textContent = lastModified;
 
-// Funcionalidad del menú hamburguesa
+// Hamburger menu functionality
 const hamburgerBtn = document.getElementById('hamburger-btn');
 const navMenu = document.getElementById('primary-nav');
 const closeIcon = document.querySelector('.close-icon');
@@ -16,7 +16,7 @@ hamburgerBtn.addEventListener('click', function() {
     const navList = navMenu.querySelector('ul');
     navList.classList.toggle('show');
     
-    // Alternar entre icono hamburguesa y icono de cierre
+    // Toggle between hamburger icon and close icon
     if (navList.classList.contains('show')) {
         hamburgerIcon.style.display = 'none';
         closeIcon.style.display = 'inline';
@@ -26,7 +26,7 @@ hamburgerBtn.addEventListener('click', function() {
     }
 });
 
-// Cerrar menú al hacer clic en un enlace de navegación
+// Close menu when clicking on a navigation link
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -35,7 +35,7 @@ navLinks.forEach(link => {
         hamburgerIcon.style.display = 'inline';
         closeIcon.style.display = 'none';
         
-        // Actualizar enlace activo
+        // Update active link
         document.querySelectorAll('nav a').forEach(a => {
             a.classList.remove('active');
         });

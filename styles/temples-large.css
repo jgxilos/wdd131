@@ -1,14 +1,14 @@
-/* Estilos para pantallas grandes */
+/* Styles for large screens */
 header {
     padding: 1.5rem;
 }
 
-/* Ocultar botón hamburguesa en pantallas grandes */
+/* Hide hamburger button on large screens */
 #hamburger-btn {
     display: none;
 }
 
-/* Mostrar navegación por defecto en pantallas grandes */
+/* Show default navigation on large screens */
 nav ul {
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Contenido principal */
+/* Main content */
 main {
     margin: 2rem auto;
     padding: 0 1.5rem;
@@ -43,7 +43,7 @@ main {
     gap: 1.5rem;
 }
 
-/* Diseño de figuras */
+/* Figure design */
 figure {
     width: 350px;
     transition: transform 0.3s ease;
