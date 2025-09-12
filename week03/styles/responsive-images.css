@@ -1,0 +1,23 @@
+/* Styles for the hero container */
+.hero {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the image inside the hero container */
+.hero img {
+    /*
+    Makes the image stretch to 100% of the width of its parent container (.hero).
+    This is key for responsive behavior.
+    */
+    width: 100%;
+    /*
+    Keeps the height proportional to the image's original width,
+    preserving its aspect ratio (e.g., 2:1).
+    This prevents the image from warping.
+    */
+    height: auto;
+
+    /* Ensures the image is displayed as a block to avoid inline spaces */
+    display: block;
+}

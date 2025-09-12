@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Responsive Images</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <!-- Main container of the page -->
+    <main>
+        <!-- Hero section with responsive image -->
+        <div class="hero">
+            <!-- Picture element to define multiple image sources -->
+            <picture>
+                <!-- Font for large screens (1000px or more) -->
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <!-- Font for medium screens (500px or more) -->
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <!-- Default image for small screens -->
+                <!-- The width and height attributes help prevent layout shifts -->
+                <img src="images/hero-small.webp" alt="Templo SUD y su entorno arquitectónico al atardecer." width="1500" height="750">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
