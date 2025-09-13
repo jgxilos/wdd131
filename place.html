@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salto Ángel - Venezuela</title>
+<!-- Link to the CSS style sheet -->
+  <link rel="stylesheet" href="styles/design.css">
+<!-- Link to JavaScript script -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Salto Ángel - Venezuela</h1>
+  </header>
+
+  <main>
+<!-- Hero with image and overlay content -->
+    <section class="hero">
+      <picture>
+        <!-- images -->
+        <source media="(max-width: 768px)" srcset="images/salto-angel-mobile.webp" type="image/webp">
+        <source media="(min-width: 769px) and (max-width: 1024px)" srcset="images/salto-angel-tablet.webp" type="image/webp">
+        <img src="images/salto-angel-desktop.webp" alt="Salto Ángel en Venezuela" loading="lazy">
+      </picture>
+
+      <div class="overlay">
+        <!-- Interesting Facts -->
+        <section class="data-section">
+          <h2>Interesting Facts</h2>
+          <ul>
+            <li><strong>Location:</strong> Canaima National Park, Bolívar, Venezuela (protected area).</li>
+            <li><strong>Height:</strong> 979 m (the highest waterfall in the world)</li>
+            <li><strong>River:</strong> Churún</li>
+            <li><strong>Heritage:</strong> UNESCO</li>
+            <li><strong>Special feature:</strong> 1st highest waterfall in the world</li>
+            <li><strong>Type:</strong> Permanent body of water</li>
+            <li><strong>No. of falls:</strong> 2</li>
+            <li><strong>Maximum width:</strong> 107 meters</li>
+            <li><strong>Altitude:</strong> 1,489 meters</li>
+            <li><strong>Total height:</strong> 979 meters</li>
+            <li><strong>Highest drop:</strong> 807 meters</li>
+            <li><strong>Coordinates:</strong> 5°58′12″N 62°32′10″W</li>
+          </ul>
+        </section>
+
+        <!-- Weather -->
+        <section class="weather-section">
+          <h2 class="weather-title">Weather</h2>
+          <img class="weather-icon" src="images/weather.svg" alt="Ícono del clima actual">
+          <ul>
+            <li><strong>Temperature:</strong> <span id="temperature">25</span>°C</li>
+            <li><strong>Wind:</strong> <span id="wind-speed">15</span> km/h</li>
+            <li><strong>Wind chill:</strong> <span id="wind-chill">N/A</span></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | W03 Assignment: Country Page</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* ===========================
+Color variables (Flag of Venezuela)
+   =========================== */
+:root {
+  --color-amarillo: #ffcc00;
+  --color-azul: #00247d;
+  --color-rojo: #cf142b;
+  --text-color: #222;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  --box-bg: rgba(245, 245, 245, 0.9);
+  --radius: 12px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, var(--color-amarillo), var(--color-azul), var(--color-rojo));
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* The image occupies the entire screen */
+  overflow: hidden;
+}
+
+.hero picture, .hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* The image fills the container without deforming */
+  display: block;
+}
+
+/* Container overlaid on the image */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: var(--bg-overlay); /* Slight darkening */
+}
+
+/* Information boxes */
+.data-section,
+.weather-section {
+  background: var(--box-bg);
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-width: 350px;
+  width: 90%; /* Base width for mobile */
+  box-shadow: var(--shadow);
+/* We use position: absolute to place the boxes freely */
+  position: absolute;
+}
+
+.data-section ul, .weather-section ul {
+  list-style: none;
+  padding-top: 0.5rem;
+}
+
+/* Header style (yellow ribbons) */
+.data-section h2,
+.weather-section h2 {
+  background-color: var(--color-amarillo);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+/* Trick to make the background reach the edges of the box */
+  margin: -1rem -1rem 1rem -1rem;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  text-align: center;
+}
+
+/* Specific positioning for boxes */
+.data-section {
+  top: 80px;
+  left: 30px;
+}
+
+.weather-section {
+  bottom: 80px;
+  right: 30px;
+}
+
+.weather-icon {
+  width: 60px;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  background: var(--color-rojo);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* ===========================
+   Media Queries para Responsividad
+   =========================== */
+@media (max-width: 768px) {
+/* On small screens, we stack the boxes in the center */
+  .hero .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Space between boxes */
+  }
+
+  .data-section,
+  .weather-section {
+    /* Disable absolute positioning on mobile */
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  }
+}
