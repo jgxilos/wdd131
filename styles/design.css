@@ -144,3 +144,17 @@ footer {
     right: auto;
   }
 }
+
+
+
+
+
+
+/* Pseudo-elemento ::after para el emoticon en vista más ancha */
+@media (min-width: 769px) { /* Asumiendo que 769px es el punto donde cambia a escritorio */
+  .weather-title::after {
+    content: "⛅"; /* Puedes cambiar esto por otro emoticon o entidad Unicode */
+    margin-left: 10px; /* Espacio entre el texto y el emoticon */
+    /* Puedes añadir más estilos si es necesario, como font-size, vertical-align, etc. */
+  }
+}
