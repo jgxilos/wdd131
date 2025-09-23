@@ -1,0 +1,45 @@
+@media screen and (min-width: 768px) {
+    /* --- Header & Navigation for large screens --- */
+    #hamburger-btn {
+        display: none; /* Hide hamburger on large screens */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        position: static; /* Reset position */
+        background: none;
+        width: auto;
+    }
+
+    nav li {
+        width: auto;
+        margin: 0 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    /* --- Main Content for large screens --- */
+    main {
+        /* GRID FOR LARGE SCREENS: Auto-fit columns */
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Gallery Grid for large screens --- */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    /* --- Temple Card Hover Effect for large screens --- */
+    .temple-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .temple-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+}
