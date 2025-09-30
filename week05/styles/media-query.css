@@ -1,0 +1,42 @@
+/* Reset margins and padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4ff; /* Fondo claro para contraste */
+}
+
+/* Common styles for header, main and footer */
+header, main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #e6f2ff; /* Azul claro */
+}
+
+/* Grid for main */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Section headers */
+section h2 {
+    color: #1a73e8; /* Azul oscuro */
+    margin-bottom: 0.5rem;
+}
