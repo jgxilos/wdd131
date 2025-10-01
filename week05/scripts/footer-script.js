@@ -21,7 +21,7 @@ function loadFooterContent() {
 
 
     const footerHTML = `
-        <p>&copy; ${currentYear} Your Name or Company. All rights reserved.</p>
+        <p>&copy; ${currentYear} Jernigam Gonzalez. All rights reserved.</p>
         <p>Last modified: ${lastModified}</p>
     `;
 
