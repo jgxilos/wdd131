@@ -1,5 +1,3 @@
-// review-script.js
-
 // Update review counter in localStorage
 function updateReviewCounter() {
     const countKey = 'reviewCounter';

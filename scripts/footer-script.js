@@ -1,5 +1,3 @@
-// footer-script.js
-
 function getCurrentYear() {
     return new Date().getFullYear();
 }

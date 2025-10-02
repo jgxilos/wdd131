@@ -1,5 +1,3 @@
-// script2.js
-
 // Product array
 const products = [
     { id: "fc-1888", name: "flux capacitor", averageRating: 4.5 },
