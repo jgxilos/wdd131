@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Fill out this form to submit your product review.">
-    <meta name="author" content="Jernigam Gonzalez">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Jernigam G. Gonzalez R.">
     <title>Product Review Form</title>
-    <link rel="stylesheet" href="styles/style2.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <header>
         <h1>Product Review Form</h1>
         <nav>
-            <a href="form.html">Home</a> <!-- Enlace a sí mismo como "Home" -->
-            <!-- Puedes añadir más enlaces de navegación aquí si es necesario -->
+            <a href="form.html">Home</a>
         </nav>
     </header>
 
@@ -25,21 +24,54 @@
                 <label for="product-name">Product Name: *</label>
                 <select id="product-name" name="productName" required>
                     <option value="" disabled selected>Select a Product...</option>
-                    <!-- Las opciones se generarán dinámicamente con JavaScript -->
+                    <!-- Options will be dynamically generated with JavaScript -->
                 </select>
 
-                <label for="overall-rating">Overall Rating: *</label>
-                <div class="rating-group">
-                    <input type="radio" id="star5" name="overallRating" value="5" required>
-                    <label for="star5" title="5 stars">☆</label>
-                    <input type="radio" id="star4" name="overallRating" value="4">
-                    <label for="star4" title="4 stars">☆</label>
-                    <input type="radio" id="star3" name="overallRating" value="3">
-                    <label for="star3" title="3 stars">☆</label>
-                    <input type="radio" id="star2" name="overallRating" value="2">
-                    <label for="star2" title="2 stars">☆</label>
-                    <input type="radio" id="star1" name="overallRating" value="1">
-                    <label for="star1" title="1 star">☆</label>
+                <!-- Fixed: Simplified rating structure -->
+                <div class="rating-field">
+                    <label>Overall Rating: *</label>
+                    <div class="rating-group">
+                        <!-- Stars in proper order with simplified structure -->
+                        <div class="star-wrapper">
+                            <input type="radio" id="star1" name="overallRating" value="1" required>
+                            <label for="star1" class="star-label">
+                                <span class="star-number">1</span>
+                                <span class="star-icon">☆</span>
+                            </label>
+                        </div>
+                        
+                        <div class="star-wrapper">
+                            <input type="radio" id="star2" name="overallRating" value="2">
+                            <label for="star2" class="star-label">
+                                <span class="star-number">2</span>
+                                <span class="star-icon">☆</span>
+                            </label>
+                        </div>
+                        
+                        <div class="star-wrapper">
+                            <input type="radio" id="star3" name="overallRating" value="3">
+                            <label for="star3" class="star-label">
+                                <span class="star-number">3</span>
+                                <span class="star-icon">☆</span>
+                            </label>
+                        </div>
+                        
+                        <div class="star-wrapper">
+                            <input type="radio" id="star4" name="overallRating" value="4">
+                            <label for="star4" class="star-label">
+                                <span class="star-number">4</span>
+                                <span class="star-icon">☆</span>
+                            </label>
+                        </div>
+                        
+                        <div class="star-wrapper">
+                            <input type="radio" id="star5" name="overallRating" value="5">
+                            <label for="star5" class="star-label">
+                                <span class="star-number">5</span>
+                                <span class="star-icon">☆</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
                 <label for="date-installed">Date of Installation: *</label>
@@ -50,19 +82,27 @@
             <fieldset>
                 <legend>Features</legend>
 
-                <p>Useful Features: *</p>
+                <p>Which features did you find useful in the product? (Check all that apply)</p>
                 <div class="checkbox-group">
-                    <input type="checkbox" id="feature1" name="usefulFeatures" value="Feature 1">
-                    <label for="feature1">Feature 1</label><br>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="durability" name="usefulFeatures" value="Durability">
+                        <label for="durability">Durability</label>
+                    </div>
 
-                    <input type="checkbox" id="feature2" name="usefulFeatures" value="Feature 2">
-                    <label for="feature2">Feature 2</label><br>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ease-of-use" name="usefulFeatures" value="Ease of Use">
+                        <label for="ease-of-use">Ease of Use</label>
+                    </div>
 
-                    <input type="checkbox" id="feature3" name="usefulFeatures" value="Feature 3">
-                    <label for="feature3">Feature 3</label><br>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="performance" name="usefulFeatures" value="Performance">
+                        <label for="performance">Performance</label>
+                    </div>
 
-                    <input type="checkbox" id="feature4" name="usefulFeatures" value="Feature 4">
-                    <label for="feature4">Feature 4</label><br>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="design" name="usefulFeatures" value="Design">
+                        <label for="design">Design</label>
+                    </div>
                 </div>
 
             </fieldset>
@@ -70,10 +110,10 @@
             <fieldset>
                 <legend>Review Details</legend>
 
-                <label for="written-review">Written Review:</label>
+                <label for="written-review">Written Review (Optional):</label>
                 <textarea id="written-review" name="writtenReview" rows="5" cols="50"></textarea>
 
-                <label for="user-name">Your Name:</label>
+                <label for="user-name">Your Name (Optional):</label>
                 <input type="text" id="user-name" name="userName">
 
             </fieldset>
@@ -82,11 +122,9 @@
         </form>
     </main>
 
-    <footer id="footer-placeholder">
-        <!-- El contenido del footer se cargará dinámicamente -->
-    </footer>
+    <footer id="footer-placeholder"></footer>
 
-    <script src="scripts/script2.js"></script>
-    <script src="scripts/footer-script.js"></script>
+    <script src="/scripts/script2.js"></script>
+    <script src="/scripts/footer-script.js"></script>
 </body>
 </html>

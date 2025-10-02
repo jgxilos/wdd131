@@ -1,21 +1,19 @@
 // review-script.js
 
+// Update review counter in localStorage
 function updateReviewCounter() {
-    const countKey = 'reviewCounter'; 
-    let count = localStorage.getItem(countKey); 
-
+    const countKey = 'reviewCounter';
+    let count = localStorage.getItem(countKey);
+    
     if (count === null) {
-
         count = 0;
     } else {
-
         count = parseInt(count, 10);
     }
-
+    
     count++;
-
     localStorage.setItem(countKey, count.toString());
-
+    
     const countNumberElement = document.getElementById('count-number');
     if (countNumberElement) {
         countNumberElement.textContent = count;
@@ -24,9 +22,11 @@ function updateReviewCounter() {
     }
 }
 
+// Display form data from URL parameters
 function displayFormData() {
     const params = new URLSearchParams(window.location.search);
     const dataObject = {};
+    
     for (const [key, value] of params.entries()) {
         if (dataObject[key]) {
             if (Array.isArray(dataObject[key])) {
@@ -38,6 +38,7 @@ function displayFormData() {
             dataObject[key] = value;
         }
     }
+    
     const dataDisplayElement = document.getElementById('data-display');
     if (dataDisplayElement) {
         dataDisplayElement.textContent = JSON.stringify(dataObject, null, 2);
@@ -46,15 +47,11 @@ function displayFormData() {
     }
 }
 
-
-
+// Initialize review page
 function initializeReviewPage() {
-
     updateReviewCounter();
-
-
     displayFormData();
 }
 
-
+// Run when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeReviewPage);
