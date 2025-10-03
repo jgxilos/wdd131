@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fill out this form to submit your product review.">
+    <meta name="description" content="Submit your product review form. Rate products and share your experience.">
     <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title>Product Review Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Product Review Form - Share Your Feedback</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Product Review Form</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <a href="form.html">Home</a>
         </nav>
     </header>
 
-    <main>
-        <form action="review.html" method="get">
+    <main role="main">
+        <form action="review.html" method="get" aria-labelledby="form-title">
             <fieldset>
-                <legend>Product Information</legend>
+                <legend id="form-title">Product Information</legend>
 
-                <label for="product-name">Product Name: *</label>
-                <select id="product-name" name="productName" required>
+                <label for="product-name">Product Name: <span class="required" aria-hidden="true">*</span></label>
+                <select id="product-name" name="productName" required aria-required="true">
                     <option value="" disabled selected>Select a Product...</option>
                     <!-- Options will be dynamically generated with JavaScript -->
                 </select>
 
-                <!-- Fixed: Simplified rating structure -->
+                <!-- Rating group with numbers above stars -->
                 <div class="rating-field">
-                    <label>Overall Rating: *</label>
-                    <div class="rating-group">
-                        <!-- Stars in proper order with simplified structure -->
+                    <label id="rating-label">Overall Rating: <span class="required" aria-hidden="true">*</span></label>
+                    <div class="rating-group" role="radiogroup" aria-labelledby="rating-label">
                         <div class="star-wrapper">
-                            <input type="radio" id="star1" name="overallRating" value="1" required>
+                            <input type="radio" id="star1" name="overallRating" value="1" required aria-required="true">
                             <label for="star1" class="star-label">
                                 <span class="star-number">1</span>
-                                <span class="star-icon">☆</span>
+                                <span class="star-icon" aria-hidden="true">☆</span>
+                                <span class="sr-only">1 star</span>
                             </label>
                         </div>
                         
@@ -47,7 +47,8 @@
                             <input type="radio" id="star2" name="overallRating" value="2">
                             <label for="star2" class="star-label">
                                 <span class="star-number">2</span>
-                                <span class="star-icon">☆</span>
+                                <span class="star-icon" aria-hidden="true">☆</span>
+                                <span class="sr-only">2 stars</span>
                             </label>
                         </div>
                         
@@ -55,7 +56,8 @@
                             <input type="radio" id="star3" name="overallRating" value="3">
                             <label for="star3" class="star-label">
                                 <span class="star-number">3</span>
-                                <span class="star-icon">☆</span>
+                                <span class="star-icon" aria-hidden="true">☆</span>
+                                <span class="sr-only">3 stars</span>
                             </label>
                         </div>
                         
@@ -63,7 +65,8 @@
                             <input type="radio" id="star4" name="overallRating" value="4">
                             <label for="star4" class="star-label">
                                 <span class="star-number">4</span>
-                                <span class="star-icon">☆</span>
+                                <span class="star-icon" aria-hidden="true">☆</span>
+                                <span class="sr-only">4 stars</span>
                             </label>
                         </div>
                         
@@ -71,14 +74,15 @@
                             <input type="radio" id="star5" name="overallRating" value="5">
                             <label for="star5" class="star-label">
                                 <span class="star-number">5</span>
-                                <span class="star-icon">☆</span>
+                                <span class="star-icon" aria-hidden="true">☆</span>
+                                <span class="sr-only">5 stars</span>
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <label for="date-installed">Date of Installation: *</label>
-                <input type="date" id="date-installed" name="dateInstalled" required>
+                <label for="date-installed">Date of Installation: <span class="required" aria-hidden="true">*</span></label>
+                <input type="date" id="date-installed" name="dateInstalled" required aria-required="true">
 
             </fieldset>
 
@@ -114,10 +118,12 @@
                 <legend>Review Details</legend>
 
                 <label for="written-review">Written Review (Optional):</label>
-                <textarea id="written-review" name="writtenReview" rows="5" cols="50"></textarea>
+                <textarea id="written-review" name="writtenReview" rows="5" cols="50" aria-describedby="review-help"></textarea>
+                <small id="review-help" class="help-text">Share your detailed experience with the product (optional)</small>
 
                 <label for="user-name">Your Name (Optional):</label>
-                <input type="text" id="user-name" name="userName">
+                <input type="text" id="user-name" name="userName" aria-describedby="name-help">
+                <small id="name-help" class="help-text">Your name will be displayed with your review (optional)</small>
 
             </fieldset>
 
@@ -125,9 +131,9 @@
         </form>
     </main>
 
-    <footer id="footer-placeholder"></footer>
+    <footer id="footer-placeholder" role="contentinfo"></footer>
 
-    <script src="scripts/script2.js"></script>
-    <script src="scripts/footer-script.js"></script>
+    <script src="scripts/script2.js" defer></script>
+    <script src="scripts/footer-script.js" defer></script>
 </body>
 </html>

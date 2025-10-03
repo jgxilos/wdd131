@@ -1,4 +1,3 @@
-// Update review counter in localStorage
 function updateReviewCounter() {
     const countKey = 'reviewCounter';
     let count = localStorage.getItem(countKey);
@@ -20,7 +19,6 @@ function updateReviewCounter() {
     }
 }
 
-// Display form data from URL parameters
 function displayFormData() {
     const params = new URLSearchParams(window.location.search);
     const dataObject = {};
@@ -45,11 +43,9 @@ function displayFormData() {
     }
 }
 
-// Initialize review page
 function initializeReviewPage() {
     updateReviewCounter();
     displayFormData();
 }
 
-// Run when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeReviewPage);
