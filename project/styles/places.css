@@ -263,3 +263,69 @@
         height: 250px;
     }
 }
+
+
+/* Birdwatching Corridors Section Styles */
+.birdwatching-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.birdwatching-section h1 {
+    color: var(--forest-green);
+    border-bottom: 2px solid var(--mustard-yellow);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.birdwatching-section h2 {
+    color: var(--forest-green);
+    margin-top: 25px;
+}
+
+.birdwatching-section h3 {
+    color: var(--forest-green);
+    margin-top: 20px;
+}
+
+.birdwatching-section p {
+    margin-bottom: 15px;
+    color: var(--slate-gray);
+    line-height: 1.6;
+}
+
+.birdwatching-section ul {
+    padding-left: 20px;
+}
+
+.birdwatching-section li {
+    margin-bottom: 8px;
+    color: var(--slate-gray);
+}
+
+.birdwatching-section strong {
+    color: var(--forest-green);
+}
+
+.birdwatching-section .map-info {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.highlight-info {
+    background-color: #e8f5e9;
+    border-left: 4px solid var(--forest-green);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Responsive design para birdwatching section */
+@media (max-width: 768px) {
+    .birdwatching-section {
+        padding: 20px;
+    }
+}
