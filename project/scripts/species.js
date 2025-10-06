@@ -102,6 +102,9 @@ function displaySpecies(speciesArray = speciesData) {
     `).join('');
     
     container.innerHTML = speciesHTML;
+    
+    // Re-setup modal events for new images
+    setTimeout(setupImageModal, 100);
 }
 
 function setupSpeciesFilters() {
